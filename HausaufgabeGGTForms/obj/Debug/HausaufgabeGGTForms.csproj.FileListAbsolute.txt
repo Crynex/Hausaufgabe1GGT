@@ -1,0 +1,10 @@
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\bin\Debug\HausaufgabeGGTForms.exe.config
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\bin\Debug\HausaufgabeGGTForms.exe
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\bin\Debug\HausaufgabeGGTForms.pdb
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csprojAssemblyReference.cache
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.Form1.resources
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.Properties.Resources.resources
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csproj.GenerateResource.cache
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csproj.CoreCompileInputs.cache
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.exe
+C:\Users\alexb\Documents\Studium\Prog\HausaufgabeGGTForms\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.pdb

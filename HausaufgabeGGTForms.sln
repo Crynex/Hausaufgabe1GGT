@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HausaufgabeGGTForms", "HausaufgabeGGTForms\HausaufgabeGGTForms.csproj", "{0997164E-7B84-4064-87EA-914EFA914E93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0997164E-7B84-4064-87EA-914EFA914E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0997164E-7B84-4064-87EA-914EFA914E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0997164E-7B84-4064-87EA-914EFA914E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0997164E-7B84-4064-87EA-914EFA914E93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14CEC6B2-DF17-44AF-B5B1-D521F91A1692}
+	EndGlobalSection
+EndGlobal
