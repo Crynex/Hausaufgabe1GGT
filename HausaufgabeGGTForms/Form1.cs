@@ -41,6 +41,11 @@ namespace HausaufgabeGGTForms
                 }
             }
 
+            if(zahl.Count == 1)
+            {
+                zahl.Add(Convert.ToInt32(zahl[0]));
+            }
+
             int tmp = zahl[0] % zahl[1];
             int ggt = zahl[0];
 
@@ -107,6 +112,16 @@ namespace HausaufgabeGGTForms
             generiereZahlen(4, 2, 101);
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            generiereZahlen(5, 2, 501);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            generiereZahlen(2, 501);
+        }
+
         private void generiereZahlen(int anzahl, int start, int grenze) 
         {
             textBox1.Text = "";
@@ -134,14 +149,6 @@ namespace HausaufgabeGGTForms
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            generiereZahlen(5, 2, 501);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            generiereZahlen(2, 501);
-        }
+       
     }
 }
