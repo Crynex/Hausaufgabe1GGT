@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,11 +27,18 @@ namespace HausaufgabeGGTForms
             string eingabeggt = textBox1.Text;
             var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
 
+
             List<int> zahl = new List<int>();
 
             for(int zl = 0; zl<zahleneingabe.Length; ++zl)
             {
-                zahl.Add(Convert.ToInt32(zahleneingabe[zl]));
+                try{
+                    zahl.Add(Convert.ToInt32(zahleneingabe[zl]));
+                }
+                catch
+                {
+
+                }
             }
 
             int tmp = zahl[0] % zahl[1];
@@ -85,25 +93,36 @@ namespace HausaufgabeGGTForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-           /* List<int> zufallszahlen = new List<int>();
-
-            for (int zl = 0; zl<2; ++zl)
-            {
-                Random zufall = new Random();
-                int zufallszahl = zufall.Next(2, 51);
-                zufallszahlen.Add(Convert.ToInt32(zufallszahl[zl]));
-            }
-            textBox1.Text =*/
+            generiereZahlen(2, 2, 51);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            generiereZahlen(3, 2, 51);
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            generiereZahlen(4, 2, 101);
+        }
 
+        private void generiereZahlen(int anzahl, int start, int grenze) 
+        {
+            textBox1.Text = "";
+            Random zufall = new Random();
+            for (int zl = 0; zl < anzahl; ++zl)
+            {
+                int zufallszahl = zufall.Next(start, grenze);
+                textBox1.Text += zufallszahl.ToString() + ",";
+                Console.WriteLine(zufallszahl);
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            generiereZahlen(5, 2, 501);
         }
     }
 }
