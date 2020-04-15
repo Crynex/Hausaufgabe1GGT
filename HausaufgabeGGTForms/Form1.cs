@@ -120,9 +120,28 @@ namespace HausaufgabeGGTForms
             }
         }
 
+        private void generiereZahlen(int start, int grenze)
+        {
+            textBox1.Text = "";
+            Random zufall = new Random();
+            int anzahl = zufall.Next(2, 11);
+            for (int zl = 0; zl < anzahl; ++zl)
+            {
+                int zufallszahl = zufall.Next(start, grenze);
+                textBox1.Text += zufallszahl.ToString() + ",";
+                Console.WriteLine(zufallszahl);
+
+            }
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             generiereZahlen(5, 2, 501);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            generiereZahlen(2, 501);
         }
     }
 }
