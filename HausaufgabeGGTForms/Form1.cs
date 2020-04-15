@@ -20,10 +20,12 @@ namespace HausaufgabeGGTForms
             label1.Text = "Bitte geben Sie die Zahlen für die Sie den GGT haben wollen kommasepariert ein: ";
             label2.Text = "Beispieleingabe: ";
             textBox1.Text = "10,25,35,50";
+            label5.Text = " ";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            StartPosition:
             string eingabeggt = textBox1.Text;
             var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
 
@@ -39,6 +41,13 @@ namespace HausaufgabeGGTForms
                 {
 
                 }
+            }
+
+            if(zahl.Count == 0)
+            {
+                label5.Text = "Bitte geben Sie Zahlen ein, wie z.B: ";
+                textBox1.Text = "10,25";
+                goto StartPosition;
             }
 
             if(zahl.Count == 1)
