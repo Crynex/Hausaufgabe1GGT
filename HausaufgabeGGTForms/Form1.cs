@@ -131,6 +131,16 @@ namespace HausaufgabeGGTForms
             generiereZahlen(2, 501);
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            generiereGerade(4, 2, 100, 2);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            generiereUngerade(4, 2, 100, 2);
+        }
+
         private void generiereZahlen(int anzahl, int start, int grenze) 
         {
             textBox1.Text = "";
@@ -158,6 +168,48 @@ namespace HausaufgabeGGTForms
             }
         }
 
-       
+        private void generiereUngerade(int anzahl, int start, int grenze, int modulu)
+        {
+            textBox1.Text = "";
+            Random zufall = new Random();
+            for (int zl = 0; zl < anzahl; ++zl)
+            {
+                int zufallszahl = zufall.Next(start, grenze);
+                if ( zufallszahl % modulu != 0)
+                {
+                    textBox1.Text += zufallszahl.ToString() + ",";
+                    Console.WriteLine(zufallszahl);
+                }
+                else
+                {
+                    zufallszahl += 1;
+                    textBox1.Text += zufallszahl.ToString() + ",";
+                    Console.WriteLine(zufallszahl);
+                }
+
+            }
+        }
+        private void generiereGerade(int anzahl, int start, int grenze, int modulu)
+        {
+            textBox1.Text = "";
+            Random zufall = new Random();
+            for (int zl = 0; zl < anzahl; ++zl)
+            {
+                int zufallszahl = zufall.Next(start, grenze);
+                if (zufallszahl % modulu == 0)
+                {
+                    textBox1.Text += zufallszahl.ToString() + ",";
+                    Console.WriteLine(zufallszahl);
+                }
+                else
+                {
+                    zufallszahl += 1;
+                    textBox1.Text += zufallszahl.ToString() + ",";
+                    Console.WriteLine(zufallszahl);
+                }
+
+            }
+        }
+
     }
 }
