@@ -17,7 +17,7 @@ namespace HausaufgabeGGTForms
         {
             InitializeComponent();
             button1.Text = "berechnen";
-            label1.Text = "Bitte geben Sie die Zahlen für die Sie den GGT haben wollen kommasepariert ein: ";
+            label1.Text = "Bitte geben Sie die Zahlen für die Sie den Größten gemeinsamen Teiler haben wollen kommasepariert ein: ";
             label2.Text = "Beispieleingabe: ";
             textBox1.Text = "10,25,35,50";
             label5.Text = " ";
@@ -69,7 +69,7 @@ namespace HausaufgabeGGTForms
                 }
             }
 
-            label3.Text = "Der GGT der Zahlen: " + textBox1.Text + " ist: ";
+            label3.Text = "Der größte gemeinsame Teiler der Zahlen: " + textBox1.Text + " ist: ";
             string ggtausgabe = Convert.ToString(ggt);
             label4.Text = ggtausgabe;
 
