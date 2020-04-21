@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace HausaufgabeGGTForms
 {
@@ -21,10 +22,16 @@ namespace HausaufgabeGGTForms
             label2.Text = "Beispieleingabe: ";
             textBox1.Text = "10,25,35,50";
             label5.Text = " ";
+            button11.Text = "2 Zufallszahlen ungerade";
+            button10.Text = "2 Zufallszahlen gerade";
+            button7.Text = "4 Zufallszahlen gerade";
+            button8.Text = "4 Zufallszahlen ungerade";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
+            //GGT
+        
             StartPosition:
             string eingabeggt = textBox1.Text;
             var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
@@ -32,18 +39,19 @@ namespace HausaufgabeGGTForms
 
             List<int> zahl = new List<int>();
 
-            for(int zl = 0; zl<zahleneingabe.Length; ++zl)
+            for (int zl = 0; zl < zahleneingabe.Length; ++zl)
             {
-                try{
+                try
+                {
                     zahl.Add(Convert.ToInt32(zahleneingabe[zl]));
                 }
-                catch
+                catch //(Exception ex)
                 {
-
+                    //MessageBox.Show(ex.Message);
                 }
             }
 
-            if(zahl.Count == 0)
+            if (zahl.Count == 0)
             {
                 label5.Text = "Bitte geben Sie Zahlen ein, wie z.B: ";
                 textBox1.Text = "10,25";
@@ -75,36 +83,7 @@ namespace HausaufgabeGGTForms
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void button2_Click(object sender, EventArgs e)
         {
             generiereZahlen(2, 2, 51);
@@ -133,12 +112,22 @@ namespace HausaufgabeGGTForms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            generiereGerade(4, 2, 100, 2);
+            generiereGerade(4, 2, 101, 2);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            generiereUngerade(4, 2, 100, 2);
+            generiereUngerade(4, 2, 101, 2);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            generiereGerade(2, 2, 51, 2);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            generiereUngerade(2, 2, 51, 2);
         }
 
         private void generiereZahlen(int anzahl, int start, int grenze) 
@@ -211,5 +200,51 @@ namespace HausaufgabeGGTForms
             }
         }
 
+       
+
+        public void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
