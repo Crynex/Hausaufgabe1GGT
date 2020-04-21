@@ -246,5 +246,91 @@ namespace HausaufgabeGGTForms
         {
 
         }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            //GGT der Zahlen ausgeben
+                button1.PerformClick();
+
+
+                //KGV berechnen
+                string eingabeggt = textBox1.Text;
+                var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
+
+
+                List<double> zahl = new List<double>();
+
+                for (int zl = 0; zl < zahleneingabe.Length; ++zl)
+                {
+                    try
+                    {
+                        zahl.Add(Convert.ToInt32(zahleneingabe[zl]));
+                    }
+                    catch //(Exception ex)
+                    {
+                        //MessageBox.Show(ex.Message);
+                    }
+                }
+
+                List<double> zahlkgv = new List<double>();
+
+                for (int zl = 0; zl < zahleneingabe.Length; ++zl)
+                {
+                    try
+                    {
+                        zahlkgv.Add(Convert.ToInt32(zahleneingabe[zl]));
+                    }
+                    catch //(Exception ex)
+                    {
+                        //MessageBox.Show(ex.Message);
+                    }
+                }
+
+                /*foreach(var a in zahlkgv)
+                {
+                    MessageBox.Show(a.ToString());
+                }*/
+
+                double tmp = zahl[0] % zahl[1];
+                double ggt = zahl[0];
+
+                double kgv = 0;
+
+                for (int zl = 0; zl < zahl.Count - 1; ++zl)
+                {
+                    while (tmp != 0)
+                    {
+                        tmp = ggt % zahl[zl + 1];
+                        zahl[zl] = zahl[zl + 1];
+                        zahl[zl + 1] = tmp;
+                        ggt = zahl[zl];
+                        Console.WriteLine("GGT: " + ggt);
+                        Console.WriteLine("Zahl: " + zahl[zl]);
+                        Console.WriteLine("Zahl+1: " + zahl[zl + 1]);
+                    }
+
+                    kgv = zahlkgv[zl] * zahlkgv[zl + 1] / ggt;
+                    zahlkgv[zl + 1] = kgv;
+                    zahl[zl + 1] = kgv;
+                    tmp += 1;
+                    Console.WriteLine("KGV: " + kgv);
+
+                    if (kgv == zahlkgv[zl] * zahlkgv[zl + 1] / ggt)
+                    {
+                        break;
+                    }
+
+                    foreach (var a in zahlkgv)
+                    {
+                        MessageBox.Show(a.ToString());
+                    }
+                }
+
+                label6.Text = "Das kleinste gemeinsame Vielfache der Zahlen: " + textBox1.Text + " ist: ";
+                string kgvausgabe = Convert.ToString(kgv);
+                label7.Text = kgvausgabe;
+
+         
+        }
     }
 }
