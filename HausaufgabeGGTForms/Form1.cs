@@ -140,6 +140,7 @@ namespace HausaufgabeGGTForms
             button1.PerformClick();
             button9.PerformClick();
         }
+        
         //GGT
         public static int ggt(int a, int b)
         {
@@ -156,7 +157,6 @@ namespace HausaufgabeGGTForms
 
             return ggt;
         }
-
 
         //KGV
         public static int Kgv(int a, int b)
@@ -203,24 +203,28 @@ namespace HausaufgabeGGTForms
             generiereZahlen(2, 501);
         }
 
+        //4 Zufallszahl gerade
         private void button7_Click(object sender, EventArgs e)
         {
-            generiereGerade(4, 2, 101, 2);
+            generiereRandom(4, 2, 101, 0);
         }
 
+        //4 Zufallszahl ungerade
         private void button8_Click(object sender, EventArgs e)
         {
-            generiereUngerade(4, 2, 101, 2);
+            generiereRandom(4, 2, 101, 1);
         }
-
+        
+        //2 Zufallszahl gerade
         private void button10_Click(object sender, EventArgs e)
         {
-            generiereGerade(2, 2, 51, 2);
+            generiereRandom(2, 2, 51, 0);
         }
 
+        //2 Zufallszahl ungerade
         private void button11_Click(object sender, EventArgs e)
         {
-            generiereUngerade(2, 2, 51, 2);
+            generiereRandom(2, 2, 51, 1);
         }
 
         //Berechnung Zufallszahlen
@@ -251,15 +255,15 @@ namespace HausaufgabeGGTForms
             }
         }
 
-        //Ungerade
-        private void generiereUngerade(int anzahl, int start, int grenze, int modulu)
+        //Gerade oder Ungerade
+        private void generiereRandom(int anzahl, int start, int grenze, int rest)
         {
             textBox1.Text = "";
             Random zufall = new Random();
             for (int zl = 0; zl < anzahl; ++zl)
             {
                 int zufallszahl = zufall.Next(start, grenze);
-                if ( zufallszahl % modulu != 0)
+                if ( zufallszahl % 2 == rest)
                 {
                     textBox1.Text += zufallszahl.ToString() + ",";
                     Console.WriteLine(zufallszahl);
@@ -273,30 +277,7 @@ namespace HausaufgabeGGTForms
 
             }
         }
-
-        //Gerade
-        private void generiereGerade(int anzahl, int start, int grenze, int modulu)
-        {
-            textBox1.Text = "";
-            Random zufall = new Random();
-            for (int zl = 0; zl < anzahl; ++zl)
-            {
-                int zufallszahl = zufall.Next(start, grenze);
-                if (zufallszahl % modulu == 0)
-                {
-                    textBox1.Text += zufallszahl.ToString() + ",";
-                    Console.WriteLine(zufallszahl);
-                }
-                else
-                {
-                    zufallszahl += 1;
-                    textBox1.Text += zufallszahl.ToString() + ",";
-                    Console.WriteLine(zufallszahl);
-                }
-
-            }
-        }
-               
+                           
        
         public void button9_Click(object sender, EventArgs e)
         {
