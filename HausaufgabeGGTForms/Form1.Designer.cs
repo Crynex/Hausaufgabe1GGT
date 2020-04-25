@@ -49,18 +49,19 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(19, 166);
+            this.button1.Location = new System.Drawing.Point(21, 166);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 30);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Berechnen GGT";
+            this.button1.Text = "Berechne GGT";
             this.button1.UseCompatibleTextRendering = true;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -94,9 +95,9 @@
             this.label3.Location = new System.Drawing.Point(17, 321);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 20);
+            this.label3.Size = new System.Drawing.Size(344, 20);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Der GGT für ... ist:";
+            this.label3.Text = "Der größte gemeinsame Teiler für ... ist:";
             // 
             // label4
             // 
@@ -105,9 +106,9 @@
             this.label4.Location = new System.Drawing.Point(17, 358);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.Size = new System.Drawing.Size(119, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "GGT";
+            this.label4.Text = "GGT Ausgabe";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
@@ -233,7 +234,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(19, 208);
+            this.button9.Location = new System.Drawing.Point(277, 166);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(241, 30);
             this.button9.TabIndex = 22;
@@ -257,15 +258,33 @@
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(21, 465);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 20);
+            this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 24;
-            this.label7.Text = "KGV";
+            this.label7.Text = "KGV Ausgabe";
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button12.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button12.FlatAppearance.BorderSize = 2;
+            this.button12.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button12.Location = new System.Drawing.Point(19, 215);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(499, 38);
+            this.button12.TabIndex = 25;
+            this.button12.Text = "Beides berechnen";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 556);
+            this.ClientSize = new System.Drawing.Size(1264, 676);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button9);
@@ -284,7 +303,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -316,6 +334,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button12;
     }
 }
 

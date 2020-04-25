@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
@@ -17,22 +18,23 @@ namespace HausaufgabeGGTForms
         public Form1()
         {
             InitializeComponent();
-            button1.Text = "berechnen";
-            label1.Text = "Bitte geben Sie die Zahlen für die Sie den Größten gemeinsamen Teiler haben wollen kommasepariert ein: ";
+            label1.Text = "Bitte geben Sie Zahlen kommasepariert ein: ";
             label2.Text = "Beispieleingabe: ";
-            textBox1.Text = "10,25,35,50";
+            label4.Text = " ";
             label5.Text = " ";
+            label7.Text = " ";
+            textBox1.Text = "10,25,35,50";
             button11.Text = "2 Zufallszahlen ungerade";
             button10.Text = "2 Zufallszahlen gerade";
             button7.Text = "4 Zufallszahlen gerade";
             button8.Text = "4 Zufallszahlen ungerade";
         }
 
+        //GGT 
         public void button1_Click(object sender, EventArgs e)
         {
-            //GGT
-        
-            StartPosition:
+
+            //Liste aufrufen
             string eingabeggt = textBox1.Text;
             var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
 
@@ -53,37 +55,128 @@ namespace HausaufgabeGGTForms
 
             if (zahl.Count == 0)
             {
-                label5.Text = "Bitte geben Sie Zahlen ein, wie z.B: ";
+                label5.Text = "Bitte geben Sie Zahlen ein, wie z.B: 10,25";
                 textBox1.Text = "10,25";
-                goto StartPosition;
             }
 
-            if(zahl.Count == 1)
+            if (zahl.Count == 1)
             {
                 zahl.Add(Convert.ToInt32(zahl[0]));
             }
 
-            int tmp = zahl[0] % zahl[1];
-            int ggt = zahl[0];
-
-            for (int zl = 0; zl < zahl.Count-1; ++zl)
+            if (zahl[0] == 0)
             {
-                while (zahl[zl + 1] != 0)
-                {
-                    tmp = ggt % zahl[zl+1];
-                    zahl[zl] = zahl[zl+1];
-                    zahl[zl + 1] = tmp;
-                    ggt = zahl[zl];
-                }
+                label5.Text = "Bitte geben ganze Zahlen ein, 0 durch eine Zahl n ist immer 0";
             }
 
+            int ggtausgabe = zahl[0];
+
+            //GGT aufrufen
+            for (int i = 0; i < zahl.Count-1; ++i)
+            {
+               ggtausgabe = ggt(zahl[i], zahl[i + 1]);
+               zahl[i + 1] = ggtausgabe;
+            }
+            //GGT ausgeben
             label3.Text = "Der größte gemeinsame Teiler der Zahlen: " + textBox1.Text + " ist: ";
-            string ggtausgabe = Convert.ToString(ggt);
-            label4.Text = ggtausgabe;
+            string ausgabeggt = Convert.ToString(ggtausgabe);
+            label4.Text = ausgabeggt;
+
 
         }
 
-      
+       //KGV
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            //Liste aufrufen
+            string eingabeggt = textBox1.Text;
+            var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
+
+
+            List<int> zahl = new List<int>();
+
+            for (int zl = 0; zl < zahleneingabe.Length; ++zl)
+            {
+                try
+                {
+                    zahl.Add(Convert.ToInt32(zahleneingabe[zl]));
+                }
+                catch //(Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                }
+            }
+
+            if (zahl.Count == 0)
+            {
+                label5.Text = "Bitte geben Sie Zahlen ein, wie z.B: 10,25";
+                textBox1.Text = "10,25";
+            }
+
+            if (zahl.Count == 1)
+            {
+                zahl.Add(Convert.ToInt32(zahl[0]));
+            }
+
+            if (zahl[0] == 0)
+            {
+                label5.Text = "Bitte geben ganze Zahlen ein, 0 durch eine Zahl n ist immer 0";
+            }
+
+
+            //KGV berechnen
+            int kgvausgabe = zahl[0];
+            kgvausgabe = Kgvliste(zahl);
+
+            //KGV ausgeben
+            label6.Text = "Das kleinste gemeinsame Vielfache der Zahlen: " + textBox1.Text + " ist: ";
+            string ausgabekgv = Convert.ToString(kgvausgabe);
+            label7.Text = ausgabekgv;
+        }
+
+        //Beides 
+        private void button12_Click(object sender, EventArgs e)
+        {
+            button1.PerformClick();
+            button9.PerformClick();
+        }
+        //GGT
+        public static int ggt(int a, int b)
+        {
+            int tmp = 0;
+            int ggt = a;
+
+            while (b != 0)
+            {
+                tmp = a % b;
+                a = b;
+                b = tmp;
+                ggt = a;
+            }
+
+            return ggt;
+        }
+
+
+        //KGV
+        public static int Kgv(int a, int b)
+        {
+            return (a * b) / ggt(a, b);
+        }
+
+        //KGV mehrere Zahlen
+        public static int Kgvliste(List<int> zahl)
+        {
+            int kgv = zahl[0];
+            for (int i = 1; i < zahl.Count; ++i)
+            {
+                kgv = Kgv(kgv, zahl[i]);
+            }
+            return kgv;
+        }
+
+
+        //Zufallszahlen
         private void button2_Click(object sender, EventArgs e)
         {
             generiereZahlen(2, 2, 51);
@@ -130,6 +223,7 @@ namespace HausaufgabeGGTForms
             generiereUngerade(2, 2, 51, 2);
         }
 
+        //Berechnung Zufallszahlen
         private void generiereZahlen(int anzahl, int start, int grenze) 
         {
             textBox1.Text = "";
@@ -157,6 +251,7 @@ namespace HausaufgabeGGTForms
             }
         }
 
+        //Ungerade
         private void generiereUngerade(int anzahl, int start, int grenze, int modulu)
         {
             textBox1.Text = "";
@@ -178,6 +273,8 @@ namespace HausaufgabeGGTForms
 
             }
         }
+
+        //Gerade
         private void generiereGerade(int anzahl, int start, int grenze, int modulu)
         {
             textBox1.Text = "";
@@ -199,9 +296,8 @@ namespace HausaufgabeGGTForms
 
             }
         }
-
+               
        
-
         public void button9_Click(object sender, EventArgs e)
         {
 
@@ -247,90 +343,9 @@ namespace HausaufgabeGGTForms
 
         }
 
-        private void button9_Click_1(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-            //GGT der Zahlen ausgeben
-                button1.PerformClick();
 
-
-                //KGV berechnen
-                string eingabeggt = textBox1.Text;
-                var zahleneingabe = eingabeggt.Split(',', ' ', '.', ':', ';', '/');
-
-
-                List<double> zahl = new List<double>();
-
-                for (int zl = 0; zl < zahleneingabe.Length; ++zl)
-                {
-                    try
-                    {
-                        zahl.Add(Convert.ToInt32(zahleneingabe[zl]));
-                    }
-                    catch //(Exception ex)
-                    {
-                        //MessageBox.Show(ex.Message);
-                    }
-                }
-
-                List<double> zahlkgv = new List<double>();
-
-                for (int zl = 0; zl < zahleneingabe.Length; ++zl)
-                {
-                    try
-                    {
-                        zahlkgv.Add(Convert.ToInt32(zahleneingabe[zl]));
-                    }
-                    catch //(Exception ex)
-                    {
-                        //MessageBox.Show(ex.Message);
-                    }
-                }
-
-                /*foreach(var a in zahlkgv)
-                {
-                    MessageBox.Show(a.ToString());
-                }*/
-
-                double tmp = zahl[0] % zahl[1];
-                double ggt = zahl[0];
-
-                double kgv = 0;
-
-                for (int zl = 0; zl < zahl.Count - 1; ++zl)
-                {
-                    while (tmp != 0)
-                    {
-                        tmp = ggt % zahl[zl + 1];
-                        zahl[zl] = zahl[zl + 1];
-                        zahl[zl + 1] = tmp;
-                        ggt = zahl[zl];
-                        Console.WriteLine("GGT: " + ggt);
-                        Console.WriteLine("Zahl: " + zahl[zl]);
-                        Console.WriteLine("Zahl+1: " + zahl[zl + 1]);
-                    }
-
-                    kgv = zahlkgv[zl] * zahlkgv[zl + 1] / ggt;
-                    zahlkgv[zl + 1] = kgv;
-                    zahl[zl + 1] = kgv;
-                    tmp += 1;
-                    Console.WriteLine("KGV: " + kgv);
-
-                    if (kgv == zahlkgv[zl] * zahlkgv[zl + 1] / ggt)
-                    {
-                        break;
-                    }
-
-                    foreach (var a in zahlkgv)
-                    {
-                        MessageBox.Show(a.ToString());
-                    }
-                }
-
-                label6.Text = "Das kleinste gemeinsame Vielfache der Zahlen: " + textBox1.Text + " ist: ";
-                string kgvausgabe = Convert.ToString(kgv);
-                label7.Text = kgvausgabe;
-
-         
         }
     }
 }
