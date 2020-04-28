@@ -201,7 +201,6 @@ namespace HausaufgabeGGTForms
         private void button3_Click(object sender, EventArgs e)
         {
             generiereZahlen(3, 2, 51);
-
         }
 
         private void button4_Click(object sender, EventArgs e)
