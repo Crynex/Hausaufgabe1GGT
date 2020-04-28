@@ -8,3 +8,13 @@ C:\Users\alexb\Documents\Mercurial\HA1 GGT\HausaufgabeGGTForms\obj\Debug\Hausauf
 C:\Users\alexb\Documents\Mercurial\HA1 GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csproj.CoreCompileInputs.cache
 C:\Users\alexb\Documents\Mercurial\HA1 GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.exe
 C:\Users\alexb\Documents\Mercurial\HA1 GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.pdb
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csprojAssemblyReference.cache
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.Form1.resources
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.Properties.Resources.resources
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csproj.GenerateResource.cache
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.csproj.CoreCompileInputs.cache
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.exe
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\obj\Debug\HausaufgabeGGTForms.pdb
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\bin\Debug\HausaufgabeGGTForms.exe.config
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\bin\Debug\HausaufgabeGGTForms.exe
+C:\Users\alexb\Documents\GitHub\Hausaufgabe1GGT\HausaufgabeGGTForms\bin\Debug\HausaufgabeGGTForms.pdb

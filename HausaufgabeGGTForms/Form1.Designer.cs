@@ -49,17 +49,25 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button12 = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(21, 166);
+            this.button1.Location = new System.Drawing.Point(5, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 30);
+            this.button1.Size = new System.Drawing.Size(303, 39);
             this.button1.TabIndex = 0;
             this.button1.Text = "Berechne GGT";
             this.button1.UseCompatibleTextRendering = true;
@@ -69,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
@@ -80,7 +88,7 @@
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(19, 109);
+            this.textBox1.Location = new System.Drawing.Point(14, 78);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(428, 20);
@@ -92,7 +100,7 @@
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 321);
+            this.label3.Location = new System.Drawing.Point(515, 78);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(344, 20);
@@ -103,7 +111,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 358);
+            this.label4.Location = new System.Drawing.Point(515, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 20);
@@ -114,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 69);
+            this.label2.Location = new System.Drawing.Point(11, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -124,7 +132,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1073, 40);
+            this.button2.Location = new System.Drawing.Point(14, 214);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 19);
@@ -135,7 +143,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1073, 63);
+            this.button3.Location = new System.Drawing.Point(14, 237);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(173, 19);
@@ -146,7 +154,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1073, 87);
+            this.button4.Location = new System.Drawing.Point(14, 261);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(173, 19);
@@ -157,7 +165,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1073, 110);
+            this.button5.Location = new System.Drawing.Point(14, 284);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(173, 19);
@@ -168,7 +176,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1073, 134);
+            this.button6.Location = new System.Drawing.Point(14, 308);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(173, 19);
@@ -181,7 +189,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(16, 93);
+            this.label5.Location = new System.Drawing.Point(11, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 14;
@@ -194,7 +202,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1073, 215);
+            this.button7.Location = new System.Drawing.Point(221, 214);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(173, 23);
             this.button7.TabIndex = 15;
@@ -204,7 +212,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(1073, 245);
+            this.button8.Location = new System.Drawing.Point(221, 244);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(173, 23);
             this.button8.TabIndex = 16;
@@ -214,7 +222,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(1073, 275);
+            this.button10.Location = new System.Drawing.Point(221, 274);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(173, 23);
             this.button10.TabIndex = 20;
@@ -224,7 +232,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(1073, 305);
+            this.button11.Location = new System.Drawing.Point(221, 304);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(173, 23);
             this.button11.TabIndex = 21;
@@ -234,19 +242,23 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(277, 166);
+            this.button9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(5, 5);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(241, 30);
-            this.button9.TabIndex = 22;
+            this.button9.Size = new System.Drawing.Size(303, 39);
+            this.button9.TabIndex = 0;
             this.button9.Text = "Berechne KGV";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseCompatibleTextRendering = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 420);
+            this.label6.Location = new System.Drawing.Point(515, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(455, 20);
             this.label6.TabIndex = 23;
@@ -256,38 +268,78 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 465);
+            this.label7.Location = new System.Drawing.Point(515, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 24;
             this.label7.Text = "KGV Ausgabe";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(14, 110);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(321, 75);
+            this.tabControl1.TabIndex = 26;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(313, 49);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "GGT";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(313, 49);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "KGV";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button12);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(313, 49);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Beides";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button12.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button12.FlatAppearance.BorderSize = 2;
-            this.button12.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button12.Location = new System.Drawing.Point(19, 215);
+            this.button12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(5, 5);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(499, 38);
-            this.button12.TabIndex = 25;
+            this.button12.Size = new System.Drawing.Size(303, 39);
+            this.button12.TabIndex = 0;
             this.button12.Text = "Beides berechnen";
+            this.button12.UseCompatibleTextRendering = true;
             this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 676);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button9);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
@@ -307,6 +359,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +390,10 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button12;
     }
 }
