@@ -71,7 +71,7 @@ namespace HausaufgabeGGTForms
 
                 if (zahl[0] == 0)
                 {
-                    MessageBox.Show("Bitte geben ganze Zahlen ein, 0 durch eine Zahl n ist immer 0");
+                    MessageBox.Show("Bitte geben Sie eine Zahl größer Null ein");
                 }
             }
 
